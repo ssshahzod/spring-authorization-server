@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  ssl:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: TRACE
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+    org.springframework.boot.autoconfigure: DEBUG
+
+oauth:
+  endpoints:
+    registration: /oauth2/register
+    authorization: /oauth2/authorize
+    token: /oauth2/token
+    issuer: http://localhost:8080
+    jwks: /oauth2/jwks
+
